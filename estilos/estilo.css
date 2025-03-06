@@ -1,0 +1,240 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos generales */
+/* Contenedor del navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10; /* Asegura que esté por encima del contenido */
+}
+
+/* Logo */
+.logo {
+  width: 100px; /* Ajusta el tamaño para móviles */
+  height: auto;
+  margin-left: 10px;
+  box-shadow: 5px 5px 10px gray;
+  z-index: 999;
+}
+
+/* Menú responsivo */
+.menu {
+  background-color: #f8f3ee;
+  box-shadow: 5px 5px 10px gray;
+  width: 100%;
+}
+
+/* Asegurar que el menú hamburguesa no quede bloqueado */
+.navbar-toggler {
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px; /* Lo alinea a la derecha */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Ícono del menú hamburguesa */
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #d49ca3;
+  margin: 5px auto;
+}
+
+/* Estilo de la barra de navegación cuando se despliega */
+.navbar-collapse {
+  background: #f8f3ee;
+  padding: 10px;
+}
+
+/* Asegurar que los enlaces del menú se vean bien */
+.navbar-nav .nav-link {
+  color: #d49ca3;
+  font-size: 18px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #f8f3ee; /* Color beige */
+  }
+  .logo {
+    width: 80px; /* Reduce el logo en pantallas pequeñas */
+  }
+  .navbar-toggler {
+    display: block; /* Asegura que sea visible */
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 70px; /* Lo baja para que no se solape con el logo */
+    left: 0;
+    width: 100%;
+    background: #f8f3ee;
+    display: none; /* Oculto por defecto */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/*FOOTER*/
+.contenedor_footer {
+  background-color: rgba(247, 244, 236, 0.8);
+  padding-top: 20px;
+}
+
+/*INDEX*/
+.bg_video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.marco-superior, .marco-inferior {
+  width: 100%;
+  height: auto;
+}
+
+.video-container {
+  width: 100%; /* Ajusta el tamaño del video */
+  max-width: 800px; /* Evita que se haga demasiado grande */
+  position: relative;
+  justify-content: center;
+  display: flex;
+}
+
+video {
+  width: 100%;
+  height: auto; /* Mantiene la relación de aspecto */
+  z-index: 1;
+}
+
+.marco_superior_video {
+  margin-top: 30px;
+}
+
+.marco_inferior_video {
+  margin: -5px;
+}
+
+.contenedor_color {
+  background-color: #4AAE9B;
+  opacity: 0.75;
+  width: 100%;
+}
+
+.contendores_general_beneficios {
+  width: 100%;
+}
+
+.contenedor_beneficios {
+  background-color: #4AAE9B;
+  opacity: 0.75;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+.tarjeta_pasos {
+  position: relative;
+  background-color: #4AAE9B;
+  opacity: 0.75; /* Color verde menta */
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numeracion {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(229, 152, 155, 0.7); /* Color rosa con transparencia */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: white; /* Color de texto más tenue */
+}
+.numeracion h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+}
+.numeracion p {
+  font-size: 16px;
+  color: #555;
+}
+
+.CTA_fin_index {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
+}
+
+.tarifas_recuadros {
+  display: flex;
+  flex-direction: column;
+  background-color: #4AAE9B;
+  color: white;
+  margin: 20px;
+  width: 50vw;
+  height: 50vh;
+  box-shadow: 5px 5px 10px gray;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(500px) rotateY(-30deg);
+}
+
+.total_sesiones {
+  font-size: 10px;
+  align-items: end;
+}
+
+.card-header {
+  background-color: #4AAE9B;
+  opacity: 0.75;
+  color: white;
+}
+
+.boton {
+  color: rgba(232, 193, 200, 0.8117647059);
+  background-color: white;
+  border-color: rgba(232, 193, 200, 0.8117647059);
+}
+.boton:hover {
+  color: white;
+  background-color: rgba(232, 193, 200, 0.8117647059);
+  border: none;
+}
+
+/*# sourceMappingURL=estilo.css.map */
