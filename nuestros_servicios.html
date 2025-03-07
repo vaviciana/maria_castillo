@@ -3,38 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilo.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <img class="logo" src="recursos/Logo.png" alt="Logo" width="150px" height="150px">
-            <div class="container-fluid menu">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
+        <nav class="navbar">
+            <div class="container-fluid justify-content-between">
+                <button type="button" class="btn boton btn-sm">Reserva tu 1ª sesión</button>
+                <img src="recursos/Logo.png" width="100px" height="100px" class="logo_menu" alt="">
+            <button class="navbar-toggler menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                        <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </div>
+            </div>
             </div>
         </nav>
     </header> 
     <main>
+        <section>
+            <div>
+                <div>
+                    <div class="titulo_servicios">
+                        <h1 class="m-3 text-center">
+                            Servicios
+                        </h1>
+                    </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row text-center flex-wrap align-items-center justify-content-center">
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2 >
+                                Depresión
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/depresion_maria_castillo.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDepresion" aria-expanded="false" aria-controls="collapseDepresion">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseDepresion">
+                            <div class="card card-body">
+                                Si sientes que el desánimo persiste, que las cosas han perdido sentido o que tu rutina se vuelve cada vez más difícil de afrontar. A través de técnicas basadas en evidencia, trabajaremos juntos para romper el ciclo de la desesperanza y recuperar el equilibrio emocional.
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2>
+                                Ansiedad
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/ansiedad_maria_castillo.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAnsiedad" aria-expanded="false" aria-controls="collapseAnsiedad">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseAnsiedad">
+                            <div class="card card-body">
+                                La ansiedad es una respuesta natural del cuerpo ante el estrés, pero cuando se vuelve intensa y constante, puede limitar tu calidad de vida. Si experimentas preocupaciones excesivas, síntomas físicos como tensión o insomnio, o evitas situaciones por miedo al malestar, la terapia puede ayudarte
 
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2>
+                                Dependencia emocional
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/dependencia_emocional_mc.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDependencia" aria-expanded="false" aria-controls="collapseDependencia">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseDependencia">
+                            <div class="card card-body">
+                                La dependencia emocional puede hacer que las relaciones se conviertan en una fuente de sufrimiento. Si sientes que necesitas constantemente la aprobación de los demás, que temes estar solo o que tu autoestima depende de una relación, trabajaremos juntos para fortalecer tu autonomía emocional. 
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2>
+                                Autoestima
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/autoestima_mc.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAutoestima" aria-expanded="false" aria-controls="collapseAutoestima">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseAutoestima">
+                            <div class="card card-body">
+                                La forma en que te percibes influye en todas las áreas de tu vida. Una baja autoestima puede manifestarse en la autocrítica constante, el miedo al rechazo o la sensación de no ser suficiente. La terapia te ayudará a, a reconocer tu valor y a desarrollar una relación más compasiva contigo mismo. 
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2>
+                                Autoestima
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/autoestima_mc.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAutoestima" aria-expanded="false" aria-controls="collapseAutoestima">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseAutoestima">
+                            <div class="card card-body">
+                                La forma en que te percibes influye en todas las áreas de tu vida. Una baja autoestima puede manifestarse en la autocrítica constante, el miedo al rechazo o la sensación de no ser suficiente. La terapia te ayudará a, a reconocer tu valor y a desarrollar una relación más compasiva contigo mismo. 
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card p-3 col-11 col-md-3 card_servicios">
+                        <div>
+                            <h2>
+                                Autoestima
+                            </h2>
+                        </div>
+                        <div>
+                            <img class="imagen_servicios" src="recursos/autoestima_mc.png" alt="">
+                        </div>
+                        <div>
+                            <button class="boton_display" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAutoestima" aria-expanded="false" aria-controls="collapseAutoestima">
+                                +
+                            </button>
+                            <div class="collapse" id="collapseAutoestima">
+                            <div class="card card-body">
+                                La forma en que te percibes influye en todas las áreas de tu vida. Una baja autoestima puede manifestarse en la autocrítica constante, el miedo al rechazo o la sensación de no ser suficiente. La terapia te ayudará a, a reconocer tu valor y a desarrollar una relación más compasiva contigo mismo. 
+                            </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn boton mt-2">
+                                Más información
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <img src="recursos/wave_footer.svg" alt="">
     <div class="container-fluid contenedor_footer">
@@ -50,4 +228,5 @@
         </footer>
     </div>    
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

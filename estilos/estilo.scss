@@ -1,114 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 *{
     padding: 0;
     margin: 0;
 }
 
-$verde_azulado:#4AAE9B;
+p{
+    font-family: 'Montserrat';
+    color: gray;
+}
+
+h1{
+    font-family: 'Playfair display';
+    color: gray;
+    font-size: 30px;
+}
+
+h2{
+    font-family: 'Playfair display';
+    color: gray;
+    font-size: 25px;
+}
+
+h3{
+    font-family: 'Playfair display';
+    color: gray;
+    font-size: 20px;
+}
+
+h4{
+    font-family: 'Playfair display';
+    color: gray;
+}
+
+$verde_azulado:#7dbdb1a7;
 $gris_marengo:#5A5A5A;
 $rosa_polvo:#E8C1C8CF;
 $beige:#F7F4ECCC;
+$titulos:"Playfair Display";
 
-/* Estilos generales */
-
-/* Contenedor del navbar */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10; /* Asegura que esté por encima del contenido */
-}
-
-/* Logo */
-.logo {
-    width: 100px; /* Ajusta el tamaño para móviles */
-    height: auto;
-    margin-left: 10px;
-    box-shadow: 5px 5px 10px gray;
-    z-index: 999;
-}
-
-/* Menú responsivo */
-.menu {
-    background-color: #f8f3ee;
-    box-shadow: 5px 5px 10px gray;
-    width: 100%;
-}
-
-/* Asegurar que el menú hamburguesa no quede bloqueado */
-.navbar-toggler {
+/*NAVBAR*/
+.menu{
+    width: 60px;
+    height: 60px;
     border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    right: 15px; /* Lo alinea a la derecha */
-    top: 50%;
-    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: $rosa_polvo;
+    opacity: 0.5;
 }
 
-/* Ícono del menú hamburguesa */
-.navbar-toggler span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #d49ca3;
-    margin: 5px auto;
+.logo_menu{
+    display: none;
 }
 
-/* Estilo de la barra de navegación cuando se despliega */
-.navbar-collapse {
-    background: #f8f3ee;
-    padding: 10px;
-}
-
-/* Asegurar que los enlaces del menú se vean bien */
-.navbar-nav .nav-link {
-    color: #d49ca3;
-    font-size: 18px;
-
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 992px) {
-    .navbar {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
-        background: #f8f3ee; /* Color beige */
-    }
-
-    .logo {
-        width: 80px; /* Reduce el logo en pantallas pequeñas */
-    }
-
-    .navbar-toggler {
-        display: block; /* Asegura que sea visible */
-    }
-
-    .navbar-collapse {
-        position: absolute;
-        top: 70px; /* Lo baja para que no se solape con el logo */
-        left: 0;
-        width: 100%;
-        background: #f8f3ee;
-        display: none; /* Oculto por defecto */
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-collapse.show {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 15px 0;
-    }
-
-    .navbar-nav {
-        flex-direction: column;
-        gap: 10px;
+@media (min-height:992px){
+    .logo_menu{
+        display:flex;
     }
 }
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    z-index: 1;
+}
+
+.collapse navbar-collapse{
+    background-color: white;
+    opacity: 0.75;
+}
+
 
 /*FOOTER*/
 .contenedor_footer{
@@ -253,3 +213,104 @@ video {
         border: none;
     }
 }
+
+/*SERVICIOS*/
+
+.imagen_servicios{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 999px;
+    box-shadow: 2px 2px 10px gray;
+}
+
+.card_servicios{
+    background-color: $verde_azulado;
+    box-shadow: 5px 5px 10px gray;
+    margin: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 45vh;
+    min-width: 25vw;
+    max-width: 70vw;
+    align-items: center;
+}
+
+@media (max-width:992px) {
+    .card_servicios{
+        min-height: 40vh;
+    }
+}
+
+.boton_display {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    background-color: $rosa_polvo;
+    border: none;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    
+    font-size: 25px; /* Asegura que el + tenga el tamaño correcto */
+    font-weight: bold;
+    color: $verde_azulado;
+    
+    margin: 10px;
+}
+
+/*SERVICIOS INTERNA*/
+
+.imagen_servicios_interna{
+    height: 90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 2px 2px 10px gray;
+
+}
+
+.fondo_servicios_interna {
+    background-image: url("../recursos/fondo_servicios_interna.png");
+    background-size: cover; /* Para que el fondo cubra el área */
+    background-position: top; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.accordion {
+    --bs-accordion-btn-focus-border-color: #86b7fe;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/*CONTACTO*/
+.formulario{
+    background-color: $verde_azulado;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 10px;
+    .lineas_formulario{
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        justify-content: space-evenly;
+        .label{
+            width: 100%;
+            padding-bottom: 2px;
+            font-family: $titulos;
+            text-align: start;
+            color: $gris_marengo;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .cuadro_texto{
+            width: 100%;
+        }
+    }
+}
+
+.mapa{
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px gray;
+}
+

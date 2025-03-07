@@ -1,103 +1,67 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   padding: 0;
   margin: 0;
 }
 
-/* Estilos generales */
-/* Contenedor del navbar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 10; /* Asegura que esté por encima del contenido */
+p {
+  font-family: "Montserrat";
+  color: gray;
 }
 
-/* Logo */
-.logo {
-  width: 100px; /* Ajusta el tamaño para móviles */
-  height: auto;
-  margin-left: 10px;
-  box-shadow: 5px 5px 10px gray;
-  z-index: 999;
+h1 {
+  font-family: "Playfair display";
+  color: gray;
+  font-size: 30px;
 }
 
-/* Menú responsivo */
+h2 {
+  font-family: "Playfair display";
+  color: gray;
+  font-size: 25px;
+}
+
+h3 {
+  font-family: "Playfair display";
+  color: gray;
+  font-size: 20px;
+}
+
+h4 {
+  font-family: "Playfair display";
+  color: gray;
+}
+
+/*NAVBAR*/
 .menu {
-  background-color: #f8f3ee;
-  box-shadow: 5px 5px 10px gray;
-  width: 100%;
-}
-
-/* Asegurar que el menú hamburguesa no quede bloqueado */
-.navbar-toggler {
+  width: 60px;
+  height: 60px;
   border: none;
-  background: none;
-  cursor: pointer;
-  position: absolute;
-  right: 15px; /* Lo alinea a la derecha */
-  top: 50%;
-  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: rgba(232, 193, 200, 0.8117647059);
+  opacity: 0.5;
 }
 
-/* Ícono del menú hamburguesa */
-.navbar-toggler span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #d49ca3;
-  margin: 5px auto;
+.logo_menu {
+  display: none;
 }
 
-/* Estilo de la barra de navegación cuando se despliega */
-.navbar-collapse {
-  background: #f8f3ee;
-  padding: 10px;
-}
-
-/* Asegurar que los enlaces del menú se vean bien */
-.navbar-nav .nav-link {
-  color: #d49ca3;
-  font-size: 18px;
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 992px) {
-  .navbar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    background: #f8f3ee; /* Color beige */
-  }
-  .logo {
-    width: 80px; /* Reduce el logo en pantallas pequeñas */
-  }
-  .navbar-toggler {
-    display: block; /* Asegura que sea visible */
-  }
-  .navbar-collapse {
-    position: absolute;
-    top: 70px; /* Lo baja para que no se solape con el logo */
-    left: 0;
-    width: 100%;
-    background: #f8f3ee;
-    display: none; /* Oculto por defecto */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-  }
-  .navbar-collapse.show {
+@media (min-height: 992px) {
+  .logo_menu {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 0;
-  }
-  .navbar-nav {
-    flex-direction: column;
-    gap: 10px;
   }
 }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.collapse navbar-collapse {
+  background-color: white;
+  opacity: 0.75;
+}
+
 /*FOOTER*/
 .contenedor_footer {
   background-color: rgba(247, 244, 236, 0.8);
@@ -142,7 +106,7 @@ video {
 }
 
 .contenedor_color {
-  background-color: #4AAE9B;
+  background-color: rgba(125, 189, 177, 0.6549019608);
   opacity: 0.75;
   width: 100%;
 }
@@ -152,7 +116,7 @@ video {
 }
 
 .contenedor_beneficios {
-  background-color: #4AAE9B;
+  background-color: rgba(125, 189, 177, 0.6549019608);
   opacity: 0.75;
   border-radius: 10px;
   padding: 10px;
@@ -161,7 +125,7 @@ video {
 
 .tarjeta_pasos {
   position: relative;
-  background-color: #4AAE9B;
+  background-color: rgba(125, 189, 177, 0.6549019608);
   opacity: 0.75; /* Color verde menta */
   border-radius: 20px;
   padding: 20px;
@@ -204,7 +168,7 @@ video {
 .tarifas_recuadros {
   display: flex;
   flex-direction: column;
-  background-color: #4AAE9B;
+  background-color: rgba(125, 189, 177, 0.6549019608);
   color: white;
   margin: 20px;
   width: 50vw;
@@ -221,7 +185,7 @@ video {
 }
 
 .card-header {
-  background-color: #4AAE9B;
+  background-color: rgba(125, 189, 177, 0.6549019608);
   opacity: 0.75;
   color: white;
 }
@@ -235,6 +199,100 @@ video {
   color: white;
   background-color: rgba(232, 193, 200, 0.8117647059);
   border: none;
+}
+
+/*SERVICIOS*/
+.imagen_servicios {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 999px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.card_servicios {
+  background-color: rgba(125, 189, 177, 0.6549019608);
+  box-shadow: 5px 5px 10px gray;
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 45vh;
+  min-width: 25vw;
+  max-width: 70vw;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .card_servicios {
+    min-height: 40vh;
+  }
+}
+.boton_display {
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(232, 193, 200, 0.8117647059);
+  border: none;
+  border-radius: 50%; /* Hace que el botón sea circular */
+  font-size: 25px; /* Asegura que el + tenga el tamaño correcto */
+  font-weight: bold;
+  color: rgba(125, 189, 177, 0.6549019608);
+  margin: 10px;
+}
+
+/*SERVICIOS INTERNA*/
+.imagen_servicios_interna {
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px;
+  box-shadow: 2px 2px 10px gray;
+}
+
+.fondo_servicios_interna {
+  background-image: url("../recursos/fondo_servicios_interna.png");
+  background-size: cover; /* Para que el fondo cubra el área */
+  background-position: top; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.accordion {
+  --bs-accordion-btn-focus-border-color: #86b7fe;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/*CONTACTO*/
+.formulario {
+  background-color: rgba(125, 189, 177, 0.6549019608);
+  box-shadow: 2px 2px 5px gray;
+  border-radius: 10px;
+}
+.formulario .lineas_formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: space-evenly;
+}
+.formulario .lineas_formulario .label {
+  width: 100%;
+  padding-bottom: 2px;
+  font-family: "Playfair Display";
+  text-align: start;
+  color: #5A5A5A;
+  font-weight: bold;
+  font-size: 18px;
+}
+.formulario .lineas_formulario .cuadro_texto {
+  width: 100%;
+}
+
+.mapa {
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px gray;
 }
 
 /*# sourceMappingURL=estilo.css.map */
