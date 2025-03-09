@@ -243,7 +243,7 @@ video {
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #FFB6C1; /* Cambia este color por el que prefieras */
+  background-color: rgba(125, 189, 177, 0.6549019608); /* Cambia este color por el que prefieras */
   color: white; /* Color del texto */
 }
 
@@ -256,7 +256,7 @@ video {
 }
 
 .accordion-item {
-  border: 1px solid #FFB6C1; /* Ajusta el color del borde */
+  border: 1px solid rgba(125, 189, 177, 0.6549019608); /* Ajusta el color del borde */
 }
 
 /*CONTACTO*/
@@ -304,6 +304,13 @@ video {
 .descripcion_maria {
   max-width: 500px;
   margin: 10px;
+}
+
+.fondo_sobremi {
+  background-image: url("../recursos/wave_sobremi.svg");
+  background-size: cover; /* Para que el fondo cubra el área */
+  background-position: top; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 /*# sourceMappingURL=estilo.css.map */
