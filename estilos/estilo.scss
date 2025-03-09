@@ -79,45 +79,28 @@ $titulos:"Playfair Display";
 
 /*INDEX*/
 
-.bg_video {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-}
-
 .marco-superior, .marco-inferior {
     width: 100%;
     height: auto;
 }
 
-.video-container {
-    width: 100%;  /* Ajusta el tamaño del video */
-    max-width: 800px; /* Evita que se haga demasiado grande */
-    position: relative;
-    justify-content: center;
+.fondo-video{
+    background-color: $verde_azulado;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 video {
-    width: 100%;
-    height: auto; /* Mantiene la relación de aspecto */
     z-index: 1;
-}
-
-.marco_superior_video{
-    margin-top: 30px;
-}
-
-.marco_inferior_video{
-    margin:-5px;
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    max-width: 600px;
 }
 
 .contenedor_color{
     background-color: $verde_azulado;
-    opacity: 0.75;
     width: 100%;
 }
 
@@ -127,11 +110,9 @@ video {
 
 .contenedor_beneficios{
     background-color: $verde_azulado;
-    opacity: 0.75;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 5px 5px 10px gray;
-
 }
 
 .tarjeta_pasos {
@@ -279,10 +260,23 @@ video {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.accordion {
-    --bs-accordion-btn-focus-border-color: #86b7fe;
-    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+.accordion-button:not(.collapsed) {
+    background-color: #FFB6C1; /* Cambia este color por el que prefieras */
+    color: white; /* Color del texto */
 }
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1); /* Invierte el color del icono */
+}
+
+.accordion-button:focus {
+    box-shadow: none; /* Elimina el borde azul de Bootstrap */
+}
+
+.accordion-item {
+    border: 1px solid #FFB6C1; /* Ajusta el color del borde */
+}
+
 
 /*CONTACTO*/
 .formulario{
@@ -314,3 +308,20 @@ video {
     box-shadow: 2px 2px 10px gray;
 }
 
+/*SOBRE MI*/
+
+.foto_maria{
+    max-width: 1000px;
+    max-height: 800px;
+    border-radius: 50%;
+}
+
+.acordeon_sobremi{
+    width: 100%;
+    max-width: 500px;
+}
+
+.descripcion_maria{
+    max-width: 500px;
+    margin: 10px;
+}
